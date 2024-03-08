@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("hotel.jpg");
+            background-repeat: no-repeat;
+            background-size: cover ;
+            background-attachment: fixed;
+            color: rgb(0, 0, 0);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        *,
+        *:before,
+        *:after {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .header {
+            width: 100%;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            background-color: transparent;
+        }
+
+        .header img {
+            width: 50px;
+            height: 50px;
+        }
+
+        .header h1 {
+            color: #ffffff;
+            font-size: 24px;
+            letter-spacing: 0.5px;
+            margin: 0;
+            position: relative;
+            transition: 0.3s;
+        }
+
+        .header h1::before {
+            content: "";
+            position: absolute;
+            background-color: #ff3c78;
+            height: 3px;
+            width: 0%;
+            left: 0;
+            bottom: -1px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .header h1:hover::before {
+            width: 100%;
+        }
+
+        .header button {
+            background-color: #ff3c78;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .header button:hover {
+            background-color: #ff6c9e;
+        }
+
+        nav {
+            width: 100%;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            padding: 0 20px;
+            background-color: transparent;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        a {
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 18px;
+            letter-spacing: 0.5px;
+            padding: 0 10px;
+            position: relative;
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        a:hover {
+            color: #000000;
+        }
+
+        a::before {
+            content: "";
+            position: absolute;
+            background-color: #000000;
+            height: 3px;
+            width: 0%;
+            left: 0;
+            bottom: -1px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        a:hover::before {
+            width: 100%;
+        }
+
+        .hotel-details {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .hotel-details .box {
+            width: calc(33.33% - 20px);
+            background-color: rgba(240, 240, 240, 0.8);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            margin-bottom: 20px;
+            padding: 20px;
+            position: relative;
+        }
+
+        .hotel-name {
+            font-weight: bold;
+            font-size: 18px;
+            font-family: 'Poppins', sans-serif;
+            color: #000;
+            margin-bottom: 10px;
+        }
+
+        .rating,
+        .price {
+            font-size: 16px;
+            font-family: 'Poppins', sans-serif;
+            color: #000;
+            margin-bottom: 10px;
+        }
+
+        .book-now-button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .book-now-button:hover {
+            background-color: #0056b3;
+        }
+
+        .footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="C:\Users\dell\Desktop\Hackathon\Images\logo.png" alt="Logo">
+        <h1>BOOK YOUR HOTEL</h1>
+        <img src="C:\Users\dell\Desktop\Hackathon\Images\Instalogo.png" alt="Instagram">
+    </div>
+    <nav>
+        <a href="C:/Users/dell/Desktop/Hackathon/INDEXES/frontpagewithoutregister.html">Home</a>
+        <a href="hotels.html">HOTELS</a>
+        <a href="travels.html">TRAVEL</a>
+        <a href="tours.html">TOUR</a>
+        <a href="C:/Users/dell/Desktop/Hackathon/INDEXES/contact.html">Contact</a>
+        <a href="C:/Users/dell/Desktop/Hackathon/INDEXES/about.html">About</a>
+    </nav>
+
+    <div class="hotel-details">
+        <div class="box">
+            <div class="hotel-name">HOTEL GEETA</div>
+            <p class="rating">5 stars out of 5</p>
+            <p class="price">Price - RS 7999/-</p><br><br>
+            <button class="book-now-button">Book Now</button>
+        </div>
+        <div class="box">
+            <div class="hotel-name">Grand Palace Hotel</div>
+            <p class="rating">4.3 stars out of 5</p>
+            <p class="price">Price - RS 7500/-</p><br><br>
+            <button class="book-now-button">Book Now</button>
+        </div>
+        <div class="box">
+            <div class="hotel-name">Sunset Resort</div>
+            <p class="rating">4.7 stars out of 5</p>
+            <p class="price">Price - RS 11000/-</p><br><br>
+            <button class="book-now-button">Book Now</button>
+        </div>
+        <div class="box">
+            <div class="hotel-name">Ocean View Inn</div>
+            <p class="rating">4.1 stars out of 5</p>
+            <p class="price">Price - RS 8500/-</p><br><br>
+            <button class="book-now-button">Book Now</button>
+        </div>
+        <div class="box">
+            <div class="hotel-name">Mountain Lodge</div>
+            <p class="rating">4.9 stars out of 5</p>
+            <p class="price">Price - RS 14500/-</p><br><br>
+            <button class="book-now-button">Book Now</button>
+        </div>
+        <div class="box">
+            <div class="hotel-name">City Lights Hotel</div>
+            <p class="rating">4.2 stars out of 5</p>
+            <p class="price">Price - RS 6000/-</p><br><br>
+            <button class="book-now-button">Book Now</button>
+        </div>
+        <div class="box">
+            <div class="hotel-name">Royal Garden Hotel</div>
+            <p class="rating">4.5 stars out of 5</p>
+            <p class="price">Price - RS 9200/-</p><br><br>
+            <button class="book-now-button">Book Now</button>
+        </div>
+        <div class="box">
+            <div class="hotel-name">Lakeview Resort</div>
+            <p class="rating">4.8 stars out of 5</p>
+            <p class="price">Price - RS 13500/-</p><br><br>
+            <button class="book-now-button">Book Now</button>
+        </div>
+        <div class="box">
+            <div class="hotel-name">Golden Sands Hotel</div>
+            <p class="rating">4.6 stars out of 5</p>
+            <p class="price">Price - RS 10500/-</p><br><br>
+            <button class="book-now-button">Book Now</button>
+        </div>
+        <div class="box">
+            <div class="hotel-name">Mountain View Resort</div>
+            <p class="rating">4.4 stars out of 5</p>
+            <p class="price">Price - RS 7800/-</p><br><br>
+            <button class="book-now-button">Book Now</button>
+        </div>
+        <div class="box">
+            <div class="hotel-name">Luxury Oasis Hotel</div>
+            <p class="rating">4.7 stars out of 5</p>
+            <p class="price">Price - RS 11200/-</p><br><br>
+            <button class="book-now-button">Book Now</button>
+        </div>
+        <div class="box">
+            <div class="hotel-name">Seaside Retreat</div>
+            <p class="rating">4.3 stars out of 5</p>
+            <p class="price">Price - RS 8800/-</p><br><br>
+            <button class="book-now-button">Book Now</button>
+        </div>
+        <div class="box">
+            <div class="hotel-name">Forest Haven Lodge</div>
+            <p class="rating">4.9 stars out of 5</p>
+            <p class="price">Price - RS 14200/-</p><br><br>
+            <button class="book-now-button">Book Now</button>
+        </div>
+        <div class="box">
+            <div class="hotel-name">Sunrise Resort</div>
+            <p class="rating">4.2 stars out of 5</p>
+            <p class="price">Price - RS 6500/-</p><br><br>
+            <button class="book-now-button">Book Now</button>
+        </div>
+        <div class="box">
+            <div class="hotel-name">Harbor View Hotel</div>
+            <p class="rating">4.6 stars out of 5</p>
+            <p class="price">Price - RS 11000/-</p><br><br>
+            <button class="book-now-button">Book Now</button>
+        </div>
+        <div class="box">
+            <div class="hotel-name">Urban Oasis Hotel</div>
+            <p class="rating">4.4 stars out of 5</p>
+            <p class="price">Price - RS 7600/-</p><br><br>
+            <button class="book-now-button">Book Now</button>
+        </div>
+    </div>
+
+    <footer class="footer">
+        TravelNest ; All Rights Reserved@2024
+    </footer>
+</body>
+</html>
+
